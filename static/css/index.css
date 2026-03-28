@@ -1,0 +1,127 @@
+:root {
+    --bg-color: #F5F1E8;
+    --ink-color: #333333;
+    --bio-green: #7A9168;
+    --tech-blue: #647C8A;
+    --paper-texture: url('https://www.transparenttextures.com/patterns/cream-paper.png'); /* Free texture host */
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: var(--paper-texture);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #4e4a4a;
+}
+
+header {
+    padding: 1rem 0;
+}
+
+.header-content {
+    max-width: 64rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-weight: bold;
+}
+div a {
+    text-decoration: none;
+    /* color: #333; */
+}
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.content {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+.content p {
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+}
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    margin: 2rem 0 1rem 0;
+}
+.content ul, .content ol {
+    margin: 0 0 1rem 0;
+    padding-left: 2rem;
+}
+.content li {
+    margin-bottom: 0.5rem;
+}
+.post-item {
+    margin: 1rem 0;
+    position: relative; /* Make post-item a positioning context */
+    padding-bottom: 2rem; /* Add some padding for the date */
+}
+.video-section{
+    width: fit-content;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #cccccc;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+.video-section a {
+    display: inline-flex;;
+    align-items: center;
+    gap: 0.5rem;
+}
+.video-section em {
+    margin: 0.3rem 0;
+}
+.youtube-icon, .link-icon {
+    width: 2rem;
+    aspect-ratio: 1;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.youtube-icon {
+    background-image: url('/static/images/youtube.svg');
+}
+.link-icon {
+    background-image: url('/static/images/link.svg');
+}
+/* .read-more-container {
+    text-align: right;
+} */
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header-content,
+    .content {
+        padding: 0 1rem;
+    }
+}
+
+code {
+    font-size: 1.2em;
+}
+
+.post-meta {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.8em; /* Make the date slightly smaller */
+    color: #777; /* A subtle color */
+}

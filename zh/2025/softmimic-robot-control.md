@@ -1,0 +1,28 @@
+---
+title: "机器人新算法SoftMimic：实现柔顺自然运动与智能避障"
+date: "2025-10-27"
+abstract: "SoftMimic算法使机器人能够柔顺地与环境互动，实现更自然、更具适应性的运动，并在遇到障碍物时智能地调整动作。"
+---
+
+来自麻省理工学院计算机科学与人工智能实验室（MIT CSAIL）和Improvable AI的研究人员，提出了一种用于人形机器人学习柔顺全身控制策略的创新框架SoftMimic。传统的机器人运动控制方法往往导致僵硬的控制，当机器人遇到意外接触时，会积极纠正偏差，从而可能造成脆弱和不安全的行为。与此形成鲜明对比的是，SoftMimic 赋予机器人对外部力做出柔顺反应的能力，同时有效保持自身的平衡和姿态。
+
+<img src="https://gmargo11.github.io/softmimic/rsc/system_diagram.jpg" style="width:100%;">
+<p style="text-align:center;">可控刚度</p>
+
+该框架的核心在于，它首先利用逆运动学求解器生成一个可行的柔顺运动增强数据集，随后使用这一数据集训练强化学习策略。通过奖励策略匹配柔顺反应而非严格跟踪参考运动，SoftMimic 能够有效地吸收外部干扰，并能将从单个运动片段中学到的经验泛化到各种复杂的任务中。
+
+**SoftMimic 的主要优势体现在以下几个方面：**
+
+*   **更自然的运动：** 机器人能够根据环境变化动态调整其刚度。在需要温和安全互动时，它能表现出低刚度；而在需要坚定抵抗外部力以保持姿态时，则能切换到高刚度状态，从而使运动更加流畅和自然。
+*   **智能障碍物处理：** SoftMimic 策略能够柔和地吸收意外接触，避免了传统方法在遇到障碍物时施加可能造成损坏的巨大力。这意味着当机器人遇到障碍物时，它不会僵硬地对抗，而是会柔顺地适应或“暂停”其动作以避免损坏。例如，在乐高结构旁边抬起手臂时，它能巧妙地避免损坏结构。
+*   **强大的任务泛化能力：** 即使是单一的参考运动，SoftMimic 也能够将其泛化到一系列任务变体中。例如，一个最初用于抓取20厘米宽箱子的策略，可以通过柔顺地调整其抓取方式，成功抓取各种尺寸的箱子，甚至能够应对意外放置的物体，展现出极强的适应性。
+
+通过这些革命性的特性，SoftMimic 极大地提升了机器人与环境互动的安全性与效率，使其能够实现更自然、更具适应性的运动和操作，为具身智能的发展开辟了新的前景。
+
+<div class="video-section">
+<em>来源</em>
+<a href="https://arxiv.org/abs/2510.17792">SoftMimic: Learning Compliant Whole-body Control from Examples | arXiv
+<span class="link-icon"></span></a>
+<a href="https://gmargo11.github.io/softmimic/">SoftMimic: Learning Compliant Whole-body Control from Examples | Project Page
+<span class="link-icon"></span></a>
+</div>

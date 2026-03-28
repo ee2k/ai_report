@@ -1,0 +1,228 @@
+/* --- CSS Variables & Global Styles --- */
+:root {
+    --bg-color: #F5F1E8;
+    --ink-color: #333333;
+    --bio-green: #7A9168;
+    --tech-blue: #647C8A;
+    --paper-texture: url('https://www.transparenttextures.com/patterns/cream-paper.png'); /* Free texture host */
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    background-image: var(--paper-texture);
+    color: var(--ink-color);
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: max(100vh, 45rem);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: var(--ink-color);
+    transition: all 0.3s ease;
+}
+
+/* --- Helper for "Hand-drawn" boxes --- */
+.sketchy-box {
+    border: 0.125rem solid var(--ink-color);
+    border-radius: 15.9375rem 0.9375rem 14.0625rem 0.9375rem/0.9375rem 14.0625rem 0.9375rem 15.9375rem;
+    /* Subtle rotation for imperfection */
+    transform: rotate(-1deg);
+}
+
+/* --- Header & Nav --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.25rem;
+}
+
+.logo {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.header-tagline {
+    font-family: 'Patrick Hand', cursive;
+    color: #555;
+    margin-top: 1rem;
+    transform: rotate(-1deg);
+}
+
+/* A little sketchy underline for the logo */
+.logo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.3125rem;
+    width: 100%;
+    height: 0.1875rem;
+    background-color: var(--bio-green);
+    border-radius: 50%;
+    transform: rotate(-2deg);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.875rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--tech-blue);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.language-switcher {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+}
+
+.language-switcher a {
+    color: var(--ink-color);
+    text-decoration: none;
+}
+
+.language-switcher a:hover {
+    color: var(--tech-blue);
+}
+
+.language-switcher .active {
+    font-weight: bold;
+}
+
+/* The special Hire Link */
+.hire-link {
+    padding: 0.5rem 1.25rem;
+    border: 0.125rem solid var(--ink-color);
+    /* Sketchy border radius */
+    border-radius: 15.9375rem 0.9375rem 14.0625rem 0.9375rem/0.9375rem 14.0625rem 0.9375rem 15.9375rem;
+}
+
+.hire-link:hover {
+    background-color: var(--ink-color);
+    color: var(--bg-color) !important;
+    transform: rotate(2deg) scale(1.05);
+}
+
+/* --- Main Content --- */
+main {
+    margin: 0.5rem auto;
+    text-align: center;
+    padding: 0 1.25rem;
+    flex-grow: 1;
+}
+
+/* Main sketch image container */
+.illustration-container {
+    width: auto;
+    /* max-width: 900px; */
+    height: 22rem; /* Designated height */
+    margin: 0 auto 3rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .sketch-placeholder {
+    font-family: 'Patrick Hand', cursive;
+    color: #999;
+    border: 0.1875rem dashed #ccc;
+    padding: 2.5rem;
+    width: 80%;
+    transform: rotate(1deg);
+} */
+
+/* The main sketch image itself */
+.main-sketch-img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1rem;
+    object-fit: contain; /* Ensures the image scales within its box */
+}
+
+*/
+h1.headline {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+}
+
+.highlight-ai {
+    color: var(--tech-blue);
+    font-style: italic;
+}
+
+.highlight-nature {
+    color: var(--bio-green);
+    font-style: italic;
+}
+
+.mission-statement {
+    font-size: 1.3rem;
+    max-width: 43.75rem;
+    margin: 0 auto 2rem auto;
+    font-family: 'Lora', serif;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    font-family: 'Patrick Hand', cursive;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.page-container {
+    width: min(65rem, 95%);
+    margin: 0 auto; /* Center the container */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow it to grow within the body flex container */
+}
+
+@media (max-width: 37.5rem) {
+    nav {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+    .illustration-container {
+        height: auto;
+    }
+}

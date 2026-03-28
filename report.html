@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <title>blog</title>
+    <script>
+        function redirect() {
+            const lang = navigator.language || navigator.userLanguage;
+            if (lang.startsWith('zh')) {
+                window.location.href = './zh/report';
+            } else {
+                window.location.href = './en/report';
+            }
+        }
+        redirect();
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
