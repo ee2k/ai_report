@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     let content = text;
 
                     // Attempt to parse YAML front matter
-                    const frontMatterMatch = text.match(/^---\n([\s\S]*?)\n---/);
+                    // const frontMatterMatch = text.match(/^---\n([\s\S]*?)\n---/);
+                    const frontMatterMatch = text.match(/<!--\s*([\s\S]*?)\s*-->/);
                     if (frontMatterMatch) {
                         const frontMatter = frontMatterMatch[1];
                         const titleMatch = frontMatter.match(/title:\s*"(.*?)"/);
