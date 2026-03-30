@@ -1,5 +1,5 @@
 ---
-layout: raw
+layout: null
 title: "机器人新算法SoftMimic：实现柔顺自然运动与智能避障"
 date: "2025-10-27"
 abstract: "SoftMimic算法使机器人能够柔顺地与环境互动，实现更自然、更具适应性的运动，并在遇到障碍物时智能地调整动作。"
