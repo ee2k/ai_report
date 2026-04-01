@@ -4,35 +4,37 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Topic</title>
-        <link rel="stylesheet" href="/static/css/index.css" />
+        <link rel="stylesheet" href="./static/css/index.css" />
     </head>
     <body>
         <header>
             <div class="header-content">
-                <div class="logo"><a href="/">home</a></div>
+                <div class="logo"><a href="../">home</a></div>
             </div>
         </header>
         <main>
             <div id="content" class="content"></div>
         </main>
-        <script src="/static/js/marked.min.js"></script>
+        <script src="./static/js/marked.min.js"></script>
         <script>
             async function loadContent() {
                 const contentDiv = document.getElementById('content');
-                const fullPath = window.location.pathname;
-                const prefix = '/topic/';
-                let path = '';
+                // const fullPath = window.location.pathname;
+                // const prefix = '/topic/';
+                // let path = '';
+                const urlParams = new URLSearchParams(window.location.search);
+                const path = urlParams.get('file');
 
-                if (fullPath.startsWith(prefix)) {
-                    path = fullPath.substring(prefix.length);
-                }
+                // if (fullPath.startsWith(prefix)) {
+                //     path = fullPath.substring(prefix.length);
+                // }
 
                 if (!path) {
                     contentDiv.innerHTML = '<p>Could not determine topic path from URL.</p>';
                     return;
                 }
 
-                const mdPath = `/${path}.md.txt`;
+                const mdPath = `${path}.md.txt`;
 
                 try {
                     const response = await fetch(mdPath);

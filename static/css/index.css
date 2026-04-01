@@ -102,9 +102,6 @@ nav a {
 .link-icon {
     background-image: url('/static/images/link.svg');
 }
-/* .read-more-container {
-    text-align: right;
-} */
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
