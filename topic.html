@@ -19,15 +19,8 @@
         <script>
             async function loadContent() {
                 const contentDiv = document.getElementById('content');
-                // const fullPath = window.location.pathname;
-                // const prefix = '/topic/';
-                // let path = '';
                 const urlParams = new URLSearchParams(window.location.search);
                 const path = urlParams.get('file');
-
-                // if (fullPath.startsWith(prefix)) {
-                //     path = fullPath.substring(prefix.length);
-                // }
 
                 if (!path) {
                     contentDiv.innerHTML = '<p>Could not determine topic path from URL.</p>';
