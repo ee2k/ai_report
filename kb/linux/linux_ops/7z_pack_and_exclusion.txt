@@ -1,0 +1,8 @@
+7z a -p -mhe=on -t7z filename.7z folder_to_pack -x\!folder_to_pack/subfolder_to_exclude
+
+folder_name="xxx"
+current_date=$(date +"%Y-%m-%d-%H")
+file_name="${folder_name}-${current_date}.7z"
+
+# Compress the folder using 7z, excluding the backend_rust/target/ directory
+7z a -p -t7z -mhe=on "$file_name" "$folder_name/" -x\!$folder_name/subfolder_to_exclude/

@@ -1,0 +1,41 @@
+Let’s find out some details about the network card in Linux. Use this command to get the network interface details:
+
+ip link show
+
+Option 1: Permanent change
+
+create a file named 00-network-name.link under /etc/systemd/network/
+
+```sh
+sudo nano /etc/systemd/network/00-network-name.link
+```
+
+```
+[Match]
+MACAddress=original:mac:address
+
+[Link]
+MACAddress=Your:custom:MAC
+NamePolicy=keep
+```
+
+Option 2: Change MAC address using Macchanger
+
+On Arch Linux or Manjaro:
+
+sudo pacman -S macchanger
+
+
+On Fedora, CentOS, RHEL:
+
+sudo dnf install macchanger
+
+
+On Debian, Ubuntu, Linux Mint, and Kali Linux:
+
+sudo apt install macchanger
+
+
+Now, to assign any random MAC address to this network card, use:
+
+sudo macchanger -r network-interface-name

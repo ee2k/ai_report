@@ -1,0 +1,9 @@
+proxies:
+  - name: "My-VPS-V2Ray"
+    type: vmess
+    server: your_server_ip
+    port: 443
+    uuid: your_uuid_from_x-ui
+    alterId: 0
+    cipher: auto
+    tls: false

@@ -1,0 +1,30 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+proxies:
+  - name: "My-WireGuard-VPN"
+    type: wireguard
+    server: server_ip_address
+    port: 51820
+    private-key: MLOW8uw64W1fTg85JIqY2o1Af/WDSuoY+6995hXFtms=
+    public-key: cntnwlYZ+NbWVhzZSwnT3WO/ajhSC7qoi+ZyErQ1s3M=
+    allowed-ips: 0.0.0.0/0, ::/0
+    keep-alive: 0
+
+proxy-groups:
+  - type: select
+    name: LOCAL_PROXY
+    interval: 1800
+    timeout: 5000
+    max-failed-times: 5
+    lazy: true
+    proxies:
+      - 'My-WireGuard-VPN'
+
+rules:
+  - GEOIP,CN,DIRECT
+  - 'MATCH,LOCAL_PROXY'

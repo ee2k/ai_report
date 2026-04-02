@@ -1,0 +1,27 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - name: My-VPS-V2Ray
+    type: vmess
+    server: server_ip_address
+    port: 10001
+    uuid: 3cf1e14a-ac47-4b08-cae2-61c288366d94
+    alterId: 0
+    cipher: auto
+    tls: false
+proxy-groups:
+  - type: select
+    name: LOCAL_PROXY
+    interval: 1800
+    timeout: 5000
+    max-failed-times: 5
+    lazy: true
+    proxies:
+      - My-VPS-V2Ray
+rules:
+  - GEOIP,CN,DIRECT
+  - MATCH,LOCAL_PROXY
