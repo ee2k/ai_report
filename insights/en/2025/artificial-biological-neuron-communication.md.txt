@@ -1,0 +1,42 @@
+<!--
+title: "Human–Machine Integration Breakthrough: Artificial Neurons Achieve Direct Communication with Biological Neurons"
+date: "2025-10-15"
+abstract: "Researchers have successfully enabled direct communication between artificial and biological neurons, bringing the possibility of thought-based interaction with computers a step closer."
+-->
+
+Researchers at the University of Massachusetts have successfully developed an artificial neuron using protein nanowires extracted from bacteria. The device matches biological neurons in signal amplitude, energy consumption, and functionality, enabling real-time communication between artificial neurons and living cells for the first time. This breakthrough opens new possibilities for highly efficient bioelectronic interfaces and neuromorphic systems. The findings were published in *Nature Communications*.
+
+**Introduction**
+
+The remarkable signal-processing capability of biological systems stems largely from neurons, which encode and decode spatiotemporal information through action potential spikes with extremely low voltage and energy consumption. Developing devices that accurately mimic neuronal behavior is considered a key step toward advancing neuromorphic electronics and improving signal exchange in bioelectronic interfaces. However, existing artificial neurons typically differ significantly from biological neurons in critical parameters, with signal amplitudes and energy consumption often an order of magnitude higher. This study demonstrates an artificial neuron that matches biological neurons not only functionally but also in key characteristics including signal amplitude, spike energy, temporal dynamics, and frequency response.
+
+<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-025-63640-7/MediaObjects/41467_2025_63640_Fig1_HTML.png?as=webp" style="width:100%;">
+<p style="text-align:center;">Construction of a memristor with biological-scale operating parameters</p>
+
+**Key Technologies**
+
+1. **Biological-Amplitude Memristor:** The research team constructed a novel memristor using protein nanowires extracted from *Geobacter sulfurreducens*. The device operates reliably at ultralow voltages (approximately 60 mV) and ultralow currents (approximately 1.7 nA), both within the biological range. This provides the foundation for achieving close parameter matching with living neurons.
+
+2. **Integration of the Memristor with an RC Circuit:** By combining the memristor with a resistor-capacitor (RC) circuit, the researchers created an artificial neuron capable of generating continuous voltage spikes. This design overcomes previous limitations of artificial neurons, enabling voltage-to-voltage signal conversion similar to biological neurons while introducing a self-regulated repolarization mechanism that mimics the closing of sodium channels.
+
+3. **Chemical Neuromodulation Module:** To emulate neuromodulation in biological neurons, the artificial neuron incorporates chemical sensors. Chemoresistors—including PEDOT:PSS for sodium ion sensing, graphene for dopamine sensing, and a simplified BBL chemoresistor—convert changes in extracellular chemical concentrations (such as sodium ions and the neurotransmitter dopamine) into modulation of the neuron's firing frequency, reproducing regulatory behaviors similar to those observed in biological neurons.
+
+4. **Bioelectronic Mesh Sensing System:** To enable real-time interaction with living cells, the researchers developed an ultrathin polymer mesh sensing system embedded with graphene sensors. The system forms a three-dimensional interface with cardiac tissue, allowing it to continuously monitor both the electrical activity and mechanical contractions of heart cells.
+
+**Research Results**
+
+1. **Comprehensive Biological Parameter Matching:** The artificial neuron closely matches biological neurons in signal amplitude (up to approximately 120 mV), spike energy consumption (approximately 37 pJ), temporal characteristics (spike widths of 1–5 ms), and frequency response. This represents a significant advance over previous artificial neurons that focused primarily on functional imitation.
+
+2. **Chemical Neuromodulation:** The integrated chemical sensors successfully demonstrated chemical regulation of the artificial neuron. For example, sodium ion concentration modulated the firing frequency, while dopamine produced bidirectional regulation—both excitatory and inhibitory effects—closely resembling neuromodulatory mechanisms in biological neurons.
+
+3. **Real-Time Biological Signal Processing:** The study provides the first demonstration of an artificial neuron processing signals from living cells in real time. When connected to cardiac cells, the artificial neuron responded to changes in cellular firing frequency, such as differences between normal conditions and drug-treated states, allowing it to distinguish cellular conditions. It also successfully detected abnormal rhythms when presented with inputs simulating cardiac arrhythmias.
+
+**Conclusion and Outlook**
+
+By exploiting the unique dynamic properties of bio-derived memristors, this work demonstrates an artificial neuron that closely matches biological neurons in both functionality and critical operating parameters. In addition to outstanding energy efficiency and environmental adaptability, these artificial neurons exhibit biologically inspired neuromodulatory behavior through integrated chemical sensing. Their successful real-time communication with living cells opens new opportunities for developing more effective bioelectronic interfaces and neuromorphic integrated systems. The research points toward a promising future for bio-inspired electronics and brings the goal of seamless integration between artificial and biological systems significantly closer.
+
+<div class="video-section">
+<em>References</em>
+<a href="https://www.nature.com/articles/s41467-025-63640-7">Constructing artificial neurons with functional parameters comprehensively matching biological values | Nature Communications
+<span class="link-icon"></span></a>
+</div>

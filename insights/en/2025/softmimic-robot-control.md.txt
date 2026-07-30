@@ -1,0 +1,30 @@
+<!--
+title: "SoftMimic: A New Robot Control Algorithm for Compliant Motion and Intelligent Obstacle Interaction"
+date: "2025-10-27"
+abstract: "The SoftMimic algorithm enables robots to interact with their environment compliantly, producing more natural and adaptive movements while intelligently responding to unexpected obstacles."
+-->
+
+Researchers from the **MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)** and **Improvable AI** have introduced **SoftMimic**, a novel framework for learning compliant whole-body control policies for humanoid robots. Traditional robot control methods often produce rigid behavior: when unexpected contact occurs, robots aggressively correct deviations from their planned motion, which can lead to brittle and potentially unsafe interactions. In contrast, SoftMimic enables robots to respond compliantly to external forces while maintaining balance and posture.
+
+<img src="https://gmargo11.github.io/softmimic/rsc/system_diagram.jpg" style="width:100%;">
+<p style="text-align:center;">Controllable stiffness</p>
+
+The core idea behind SoftMimic is to first generate a dataset of feasible compliant motions using an inverse kinematics solver with compliance augmentation. This dataset is then used to train a reinforcement learning policy. Rather than rewarding the robot for rigidly tracking reference trajectories, the training objective encourages it to reproduce compliant responses to external forces. As a result, the learned policy can naturally absorb disturbances and generalize behaviors learned from a single motion demonstration to a wide range of more complex tasks.
+
+**Key Advantages of SoftMimic**
+
+* **More Natural Movement:** The robot can dynamically adjust its stiffness according to the situation. During tasks that require gentle and safe interaction, it adopts low stiffness to remain compliant. When stronger resistance is needed to maintain posture or resist external forces, it switches to a higher stiffness. This produces smoother, more natural, and more human-like movements.
+
+* **Intelligent Obstacle Interaction:** SoftMimic allows the robot to absorb unexpected contact gracefully instead of applying large corrective forces that could damage surrounding objects. Rather than rigidly pushing through an obstacle, the robot can compliantly adapt its motion or temporarily pause to avoid collisions. For example, when raising its arm near a delicate LEGO structure, it can naturally adjust its movement to avoid knocking the structure over.
+
+* **Strong Task Generalization:** Even when trained from a single reference motion, SoftMimic can generalize that behavior to a broad range of task variations. For instance, a policy originally trained to grasp a 20-centimeter-wide box can automatically adapt its grasp to boxes of different sizes. It can also handle unexpectedly placed objects by adjusting its movements compliantly, demonstrating remarkable adaptability.
+
+By combining compliant control with reinforcement learning, SoftMimic significantly improves both the safety and effectiveness of robot-environment interaction. Its ability to generate natural, adaptive whole-body movements while gracefully responding to unexpected contacts represents an important step toward more capable embodied AI systems and real-world humanoid robots.
+
+<div class="video-section">
+<em>References</em>
+<a href="https://arxiv.org/abs/2510.17792">SoftMimic: Learning Compliant Whole-body Control from Examples | arXiv
+<span class="link-icon"></span></a>
+<a href="https://gmargo11.github.io/softmimic/">SoftMimic: Learning Compliant Whole-body Control from Examples | Project Page
+<span class="link-icon"></span></a>
+</div>

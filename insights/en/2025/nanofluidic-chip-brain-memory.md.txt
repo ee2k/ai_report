@@ -1,6 +1,6 @@
 <!--
 title: "Scientists create nanofluidic chip with 'brain-like' memory pathways"
-date: "2025-10-27"
+date: "2025-10-10"
 abstract: "Scientists at Monash University have created a tiny fluid based chip that behaves like neural pathways of the brain, potentially opening the door to a new generation of computers."
 -->
 

@@ -42,7 +42,8 @@
                     let abstract = '';
                     let contentToParse = markdown;
 
-                    const frontMatterMatch = markdown.match(/^---\n([\s\S]*?)\n---/);
+                    // const frontMatterMatch = markdown.match(/^---\n([\s\S]*?)\n---/);
+                    const frontMatterMatch = markdown.match(/<!--\s*([\s\S]*?)\s*-->/);
                     if (frontMatterMatch) {
                         const frontMatter = frontMatterMatch[1];
                         const titleMatch = frontMatter.match(/title:\s*"(.*?)"/);

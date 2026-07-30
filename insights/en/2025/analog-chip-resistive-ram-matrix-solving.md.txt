@@ -1,0 +1,34 @@
+<!--
+title: "Chip breakthrough: New analogue chip delivers 1,000× higher speed with 100× lower energy use"
+date: "2025-10-27"
+abstract: "A new analogue chip developed by Peking University is 1,000 times faster and uses 100 times less energy than digital chips."
+-->
+
+Published in Nature Electronics, this work presents a precise and scalable analogue matrix-equation solver designed to overcome a long-standing accuracy bottleneck in analogue computing. Led by a Peking University team, the work combines an innovative iterative algorithm with resistive random-access memory (RRAM) hardware to provide an energy-efficient, high-throughput solution for large-scale matrix equations.
+
+<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41928-025-01477-0/MediaObjects/41928_2025_1477_Fig1_HTML.png?as=webp" style="width:100%;">
+<p style="text-align:center;">AMC circuit for solving the matrix equation Ax = b</p>
+
+**Core technologies and innovations**
+
+1.  **Overcoming the analogue-computing accuracy bottleneck:** Traditional analogue computing struggles with high-precision tasks because of its inherent accuracy limits. The team developed an iterative algorithm that combines analogue low-precision matrix inversion (LP-INV) with analogue high-precision matrix–vector multiplication (HP-MVM). This mixed-precision strategy substantially improves overall accuracy, bringing it closer to digital computing.
+
+2.  **RRAM-based hardware:** The LP-INV and HP-MVM operations were implemented on a foundry-fabricated, 3-bit RRAM chip. Its 1T1R (one-transistor, one-resistor) cells provide eight conductance levels, increasing storage and computing density. The TaOx-based RRAM array is integrated on a 40-nm CMOS platform and precisely programmed with an ASAP (Adaptive Step-size Adjustment Programming) write-and-verify method. A 1-Mb RRAM chip performs HP-MVM, while an 8×8 array performs LP-INV.
+
+3.  **Scalability through the BlockAMC algorithm:** To solve large matrix equations, the team introduced BlockAMC. It divides a large matrix into sub-blocks distributed across RRAM arrays, allowing inversion and matrix–vector multiplication without repeated programming. A sequence of LP-INV and HP-MVM operations lets BlockAMC handle growing matrices, with computational complexities of O(N^1.59) and O(N^2), respectively.
+
+**Performance and applications**
+
+*   **Outstanding performance:** Benchmarks show that, at the same accuracy, the analogue method delivers 1,000× the throughput and 100× the energy efficiency of state-of-the-art digital processors.
+*   **High accuracy and transient response:** The method experimentally inverted a 16×16 real-valued matrix at 24-bit fixed-point precision, comparable to 32-bit floating point (FP32). The analogue inversion circuit converged in 120 ns and the matrix–vector multiplication circuit in 60 ns.
+*   **Practical potential:** Applied to signal detection in large multiple-input multiple-output (MIMO) systems, the method reached FP32 digital-processor performance after only three iterations. This addresses the accuracy bottleneck in reliable analogue signal processing, with particular promise for large-scale MIMO processing in the 6G era.
+
+**Conclusion**
+
+By combining an innovative iterative algorithm with RRAM hardware, this research overcomes long-standing accuracy and scalability challenges in analogue computing and provides an efficient, high-throughput approach to large-scale matrix equations. The Peking University team’s work advances analogue computing and points to new directions for future high-performance computing and AI hardware.
+
+<div class="video-section">
+<em>References</em>
+<a href="https://www.nature.com/articles/s41928-025-01477-0">Precise and scalable analogue matrix equation solving using resistive random-access memory chips | Nature Electronics
+<span class="link-icon"></span></a>
+</div>
