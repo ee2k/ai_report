@@ -1,0 +1,9 @@
+.construction-pic-container {
+    width: auto;
+    /* max-width: 900px; */
+    height: 22rem; /* Designated height */
+    margin: 0 auto 8rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
