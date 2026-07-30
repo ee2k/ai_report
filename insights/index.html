@@ -7,9 +7,9 @@
         function redirect() {
             const lang = navigator.language || navigator.userLanguage;
             if (lang.startsWith('zh')) {
-                window.location.href = './zh/report';
+                window.location.href = './zh';
             } else {
-                window.location.href = './en/report';
+                window.location.href = './en';
             }
         }
         redirect();
