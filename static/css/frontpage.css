@@ -124,7 +124,7 @@ nav {
 /* The special Hire Link */
 .hire-link {
     padding: 0.5rem 1.25rem;
-    border: 0.125rem solid var(--ink-color);
+    /* border: 0.125rem solid var(--ink-color); */
     /* Sketchy border radius */
     border-radius: 15.9375rem 0.9375rem 14.0625rem 0.9375rem/0.9375rem 14.0625rem 0.9375rem 15.9375rem;
 }

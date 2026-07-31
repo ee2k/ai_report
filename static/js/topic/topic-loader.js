@@ -1,0 +1,67 @@
+window.loadContent = async function(path) {
+    const contentDiv = document.getElementById('content');
+    if (!contentDiv) {
+        throw new Error("Content container not found");
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const mdPath = `${path}.md.txt`;
+
+    try {
+        const response = await fetch(mdPath);
+        if (!response.ok) {
+            throw new Error(`File not found: ${mdPath}`);
+        }
+        const markdown = await response.text();
+
+        let title = 'Topic'; // Default title
+        let date = '';
+        let abstract = '';
+        let contentToParse = markdown;
+
+        // const frontMatterMatch = markdown.match(/^---\n([\s\S]*?)\n---/);
+        const frontMatterMatch = markdown.match(/<!--\s*([\s\S]*?)\s*-->/);
+        if (frontMatterMatch) {
+            const frontMatter = frontMatterMatch[1];
+            const titleMatch = frontMatter.match(/title:\s*"(.*?)"/);
+            const dateMatch = frontMatter.match(/date:\s*"(.*?)"/);
+            const abstractMatch = frontMatter.match(/abstract:\s*"(.*?)"/);
+
+            if (titleMatch && titleMatch[1]) {
+                title = titleMatch[1];
+            }
+            if (dateMatch && dateMatch[1]) {
+                date = dateMatch[1];
+            }
+            if (abstractMatch && abstractMatch[1]) {
+                abstract = abstractMatch[1];
+            }
+
+            contentToParse = markdown.substring(frontMatterMatch[0].length).trim();
+        } else {
+            // No YAML front matter, try to get title from first H1
+            const firstH1Match = markdown.match(/^#\s*(.*)/);
+            if (firstH1Match && firstH1Match[1]) {
+                title = firstH1Match[1].trim();
+                // Remove the H1 line from contentToParse to avoid duplication
+                contentToParse = markdown.substring(markdown.indexOf(firstH1Match[0]) + firstH1Match[0].length).trim();
+            }
+        }
+
+        document.title = title;
+
+        let headerHtml = `<h2>${title}</h2>`;
+        if (date) {
+            headerHtml += `<p class="post-date">${date}</p>`;
+        }
+        if (abstract) {
+            headerHtml += `<p class="post-abstract">${abstract}</p>`;
+        }
+
+        contentDiv.innerHTML = headerHtml + marked.parse(contentToParse);
+    } catch (error) {
+        console.error('Error loading content:', error);
+        contentDiv.innerHTML = `<p>Error loading content: ${error.message}</p>`;
+    }
+}
