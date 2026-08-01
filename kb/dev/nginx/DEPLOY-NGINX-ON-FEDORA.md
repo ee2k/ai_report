@@ -44,7 +44,6 @@ Verify locally first:
 
 ```bash
 curl -I -H 'Host: intuit-mind.cc' http://127.0.0.1/construction
-curl -I -H 'Host: intuit-mind.cc' http://127.0.0.1/topic
 ```
 
 Both should return `200`. `/en` and `/zh` intentionally redirect to their

@@ -80,8 +80,8 @@
         await loadScript("/static/js/marked.min.js");
         await loadScript("/static/js/topic/topic-loader.js");
 
-        if (window.loadContent && window.TOPIC_PATH) {
-            await window.loadContent(window.TOPIC_PATH);
+        if (window.loadContent) {
+            await window.loadContent();
         }
     }
 

@@ -28,7 +28,7 @@ abstract: "谷歌研究人员在Willow量子芯片上利用“量子回声”算
 尽管存在挑战，但“量子回声”算法的成功演示，无疑为量子计算的实际应用开辟了新的途径。它不仅深化了我们对量子系统相互作用的理解，也为未来在化学、材料科学乃至生物医学等领域利用量子计算机解决实际问题奠定了基础。随着量子硬件和算法的不断进步，量子计算有望在未来五年内，从实验室走向更广阔的应用场景。
 
 <div class="video-section">
-<em>来源</em>
+<em>引用</em>
 <a href="https://www.nature.com/articles/d41586-025-03300-4">Google measures quantum echoes on Willow quantum computer chip | Nature
 <span class="link-icon"></span></a>
 <a href="https://www.scientificamerican.com/article/google-measures-quantum-echoes-on-willow-quantum-computer-chip/">Google Measures Quantum Echoes on Willow Quantum Computer Chip | Scientific American

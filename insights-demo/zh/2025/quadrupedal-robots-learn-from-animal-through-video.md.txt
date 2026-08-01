@@ -35,7 +35,7 @@ abstract: "新研究通过单目视频实现四足机器人对动物运动技能
 该框架通过利用互联网上丰富的单目视频资源，显著降低了四足机器人学习复杂运动技能的数据获取成本和技术门槛，避免了对昂贵动作捕捉系统和复杂奖励设计的依赖。这对于足式机器人（包括四足和人形机器人）的研究、具身智能的发展具有重要意义。此外，该技术还可应用于动物行为学研究（通过视频分析动物运动特性）、神经科学研究（跟踪用户定义的身体部位）以及虚拟世界中数字角色或动物的动作生成。尽管该框架在跨物种形态可伸缩性和3D运动估计的某些失败案例上仍存在局限性，但其已展现出巨大的潜力。
 
 <div class="video-section">
-<em>来源</em>
+<em>引用</em>
 <a href="https://www.nature.com/articles/s44182-025-00048-x">Learning aggressive animal locomotion skills for quadrupedal robots solely from monocular videos | npj Robotics
 <span class="link-icon"></span></a>
 </div>

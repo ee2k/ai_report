@@ -28,7 +28,7 @@ abstract: "北京大学新研制的模拟芯片相对数字芯片速度提升100
 这项研究通过创新的迭代算法和RRAM硬件实现，克服了模拟计算长期存在的精度和可扩展性挑战，为大规模矩阵方程求解提供了高效能、高吞吐量的解决方案。北京大学团队的这一突破性工作，不仅推动了模拟计算技术的发展，也为未来高性能计算和人工智能硬件提供了新的方向。
 
 <div class="video-section">
-<em>来源</em>
+<em>引用</em>
 <a href="https://www.nature.com/articles/s41928-025-01477-0">Precise and scalable analogue matrix equation solving using resistive random-access memory chips | Nature Electronics
 <span class="link-icon"></span></a>
 </div>

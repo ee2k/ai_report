@@ -4,7 +4,9 @@ window.loadContent = async function(path) {
         throw new Error("Content container not found");
     }
 
-    const urlParams = new URLSearchParams(window.location.search);
+    if (!path) {
+        path = window.location.pathname.replace(/\.html$/, '');
+    }
 
     const mdPath = `${path}.md.txt`;
 

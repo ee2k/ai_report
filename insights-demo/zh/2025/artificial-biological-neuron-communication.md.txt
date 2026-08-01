@@ -30,7 +30,7 @@ abstract: "新研究成功让人工神经元与生物神经元直接交流，未
 
 本研究通过利用生物衍生材料忆阻器的独特动力学特性，构建了在功能和关键参数上均与生物神经元高度匹配的人工神经元。这些人工神经元不仅具有卓越的能效和环境适应性，还通过集成化学传感器实现了类似生物神经调控的行为。与生物细胞的实时信号流演示，为构建更有效的生物电子接口和神经形态集成系统开辟了新的可能性。这项工作为开发生物模拟电子学指明了有前景的方向，有望实现与生物系统更紧密的融合。
 <div class="video-section">
-<em>来源</em>
+<em>引用</em>
 <a href="https://www.nature.com/articles/s41467-025-63640-7">Constructing artificial neurons with functional parameters comprehensively matching biological values | nature communications
 <span class="link-icon"></span></a>
 </div>

@@ -20,7 +20,7 @@ abstract: "SoftMimic算法使机器人能够柔顺地与环境互动，实现更
 通过这些革命性的特性，SoftMimic 极大地提升了机器人与环境互动的安全性与效率，使其能够实现更自然、更具适应性的运动和操作，为具身智能的发展开辟了新的前景。
 
 <div class="video-section">
-<em>来源</em>
+<em>引用</em>
 <a href="https://arxiv.org/abs/2510.17792">SoftMimic: Learning Compliant Whole-body Control from Examples | arXiv
 <span class="link-icon"></span></a>
 <a href="https://gmargo11.github.io/softmimic/">SoftMimic: Learning Compliant Whole-body Control from Examples | Project Page
