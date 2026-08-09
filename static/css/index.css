@@ -1,10 +1,4 @@
-:root {
-    --bg-color: #F5F1E8;
-    --ink-color: #333333;
-    --bio-green: #7A9168;
-    --tech-blue: #647C8A;
-    --paper-texture: url('https://www.transparenttextures.com/patterns/cream-paper.png'); /* Free texture host */
-}
+@import url("global.css");
 
 body {
     background-color: var(--bg-color);
@@ -12,7 +6,8 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    color: #4e4a4a;
+    /* color: #4e4a4a; */
+    color: var(--ink-color);
 }
 
 header {

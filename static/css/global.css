@@ -1,0 +1,9 @@
+:root {
+    --bg-color: #F5F1E8;
+    --ink-color: #333333;
+    /* --bg-color: #424242;
+    --ink-color: #e8e8e8; */
+    --bio-green: #7A9168;
+    --tech-blue: #647C8A;
+    --paper-texture: url('https://www.transparenttextures.com/patterns/cream-paper.png'); /* Free texture host */
+}

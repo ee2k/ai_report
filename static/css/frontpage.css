@@ -1,11 +1,4 @@
-/* --- CSS Variables & Global Styles --- */
-:root {
-    --bg-color: #F5F1E8;
-    --ink-color: #333333;
-    --bio-green: #7A9168;
-    --tech-blue: #647C8A;
-    --paper-texture: url('https://www.transparenttextures.com/patterns/cream-paper.png'); /* Free texture host */
-}
+@import url("global.css");
 
 body,
 html {
